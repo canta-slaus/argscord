@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A small package to help you process user command input for Discord.js",
   "main": "index.js",
-  "keywords": [],
+  "keywords": ["argscord", "discord"],
   "author": "https://github.com/canta-slaus",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
