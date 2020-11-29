@@ -6,19 +6,19 @@
  * @return {array|undefined} Returns the arguments array if all the arguments were as expected, else, returns `undefined`
  */
 function processArguments(message, prefix, expectedArgs) {
-    if (typeof message !== "object" || message === null || typeof message.id !== "string") return console.log("argcord: The provided message is not a message")
-    if (typeof prefix !== 'string') return console.log("argcord: prefix has to be a string")
-    if (prefix.length === 0) return console.log("argcord: prefix can not be an empty string")
-    if (!Array.isArray(expectedArgs)) return console.log("argcord: expectedArgs has to be an array")
+    if (typeof message !== "object" || message === null || typeof message.id !== "string") return console.log("argscord: The provided message is not a message")
+    if (typeof prefix !== 'string') return console.log("argscord: prefix has to be a string")
+    if (prefix.length === 0) return console.log("argscord: prefix can not be an empty string")
+    if (!Array.isArray(expectedArgs)) return console.log("argscord: expectedArgs has to be an array")
     let msgArgs = message.content.slice(prefix.length).trim().split(/ +/);
     msgArgs.shift();
     let counter = 0;
     let amount, num, role, member, channel;
     for (const argument of expectedArgs) {
-        if (typeof argument !== "object" || argument === null) return console.log("argcord: Argument is not an object")
-        if (!argument.type) return console.log("argcord: You didn't provide an argument type");
-        if (typeof argument.type !== "string") return console.log("argcord: Argument type is not a string")
-        amount = isNaN(argument.amount) ? 1 : parseInt(argument.amount)
+        if (typeof argument !== "object" || argument === null) return console.log("argscord: Argument is not an object")
+        if (!argument.type) return console.log("argscord: You didn't provide an argument type");
+        if (typeof argument.type !== "string") return console.log("argscord: Argument type is not a string")
+        amount = isNaN(argument.amount) ? 1 : ( parseInt(argument.amount) <= 0 ? 1 : parseInt(argument.prompt) )
         for (var i = 0; i < amount; i++) {
             switch (argument.type) {
                 case "NUMBER":
@@ -108,7 +108,7 @@ function processArguments(message, prefix, expectedArgs) {
                     break;
 
                 default:
-                    return console.log(`argcord: The argument type '${argument.type}' doesn't exist`);
+                    return console.log(`argscord: The argument type '${argument.type}' doesn't exist`);
             }
             counter++
         }
