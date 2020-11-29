@@ -1,13 +1,13 @@
-# Argcord
-Argcord is a small package to help you handle command arguments.
+# Argscord
+argscord is a small package to help you handle command arguments.
 ## Installation
 ```
-npm i argcord
+npm i argscord
 ```
 ## Usage
 Simply require the package inside your message event and pass in the right parameters.
 ```js
-const argcord = require('argcord');
+const argcord = require('argscord');
 
 //
 // Somewhere inside your message event
