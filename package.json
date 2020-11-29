@@ -1,0 +1,9 @@
+{
+  "name": "argscord",
+  "version": "1.0.0",
+  "description": "A small package to help you process user command input for Discord.js",
+  "main": "index.js",
+  "keywords": [],
+  "author": "https://github.com/canta-slaus",
+  "license": "ISC"
+}
