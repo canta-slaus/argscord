@@ -1,9 +1,12 @@
 {
   "name": "argscord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small package to help you process user command input for Discord.js",
   "main": "index.js",
-  "keywords": ["argscord", "discord"],
+  "keywords": [
+    "argscord",
+    "discord"
+  ],
   "author": "https://github.com/canta-slaus",
   "license": "ISC",
   "dependencies": {}
